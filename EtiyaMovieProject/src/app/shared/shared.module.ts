@@ -4,6 +4,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ShowcaseComponent } from './pages/showcase/showcase.component';
 import { OverlayTitleComponent } from './components/overlay-title/overlay-title.component';
 import { CategoryListComponent } from './components/category-list/category-list.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { CategoryListComponent } from './components/category-list/category-list.
     NavbarComponent,
     ShowcaseComponent,
     OverlayTitleComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    MovieListComponent,
+    MovieCardComponent
   ],
   imports: [
     CommonModule
@@ -19,7 +23,9 @@ import { CategoryListComponent } from './components/category-list/category-list.
   exports:[
     NavbarComponent,
     OverlayTitleComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    MovieCardComponent,
+    MovieListComponent
   ]
 })
 export class SharedModule { }

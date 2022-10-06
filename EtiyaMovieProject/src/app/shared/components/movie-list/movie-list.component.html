@@ -1,0 +1,13 @@
+<ng-template [ngIf]="movieList">
+  <div *ngIf="movieList.length > 0; else emptyMovie">
+    <h4 class="title">MOVİES</h4>
+    <div class="row">
+      <div class="col-4" *ngFor="let m of movieList">
+        <app-movie-card [movie]="m"></app-movie-card>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<ng-template #emptyMovie>
+  <div class="alert alert-danger" role="alert">Can not find any movie</div>
+</ng-template>

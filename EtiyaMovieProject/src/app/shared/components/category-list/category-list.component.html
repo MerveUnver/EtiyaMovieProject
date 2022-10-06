@@ -1,4 +1,18 @@
-<ng-template [ngIf]="categoryList" [ngIfElse]="loading">
+<div _ngcontent-pxb-c100="" class="form-group">
+  <input
+    _ngcontent-pxb-c100=""
+    type="text"
+    etiyainput="white"
+    formcontrolname="search"
+    placeholder="Search a Movie"
+    ng-reflect-etiya-input="white"
+    ng-reflect-name="search"
+    ng-reflect-ng-class="[object Object]"
+    class="e-input-white ng-untouched ng-pristine ng-invalid"
+  />
+</div>
+
+<ng-template [ngIf]="categoryList">
   <div class="list-group">
     <button
       type="button"
@@ -20,8 +34,12 @@
   </div>
 </ng-template>
 
-<ng-template #loading>
-  <div class="spinner-border text-primary" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
-</ng-template>
+<button
+  _ngcontent-pxb-c100=""
+  type="submit"
+  etiyabutton="login"
+  ng-reflect-etiya-button="login"
+  class="e-btn-login"
+>
+  ADD NEW MOVİE
+</button>

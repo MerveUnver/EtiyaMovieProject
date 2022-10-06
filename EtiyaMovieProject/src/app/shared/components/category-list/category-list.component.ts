@@ -14,9 +14,9 @@ export class CategoryListComponent implements OnInit {
   constructor(private categoriesService:CategoriesService) { }
 
   ngOnInit(): void {
-    setTimeout(() => {
+
       this.getCategories();
-    }, 1000);
+    ;
     
   }
 
