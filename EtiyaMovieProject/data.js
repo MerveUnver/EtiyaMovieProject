@@ -12,7 +12,7 @@ module.exports = function(){
                    
                 ] ,
                 "plot": "The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father the ambitious celestial being Ego.",
-                "poster": "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
+                "poster": "https://i.pinimg.com/originals/18/f0/e4/18f0e445b329c569ee5932e6a8923959.jpg",
                 "imdbRating": 7.6,
             },
             {
@@ -26,36 +26,34 @@ module.exports = function(){
                     
                 ] ,
                 "plot": "The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father the ambitious celestial being Ego.",
-                "poster": "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
+                "poster": "https://getwallpapers.com/wallpaper/full/0/6/4/1109774-inception-wallpaper-1920x1080-computer.jpg",
                 "imdbRating": 7.6,
             },
             {
                 "id": 3,
-                "name": "Guardians of the Galaxy Vol. 2",
+                "name": "Blonde",
                 "year": "2017",
-                "runtime": "136 min",
+                "runtime": "164 min",
                 "categories":[
-                    {"id":1, "name":"Action"},
-                    {"id":2, "name":"Adventure"},
-                    {"id":3, "name":"Comedy"}
+                    {"id":4, "name":"Dram"},
+                    {"id":5, "name":"Romantic"}
                 ] ,
-                "plot": "The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father the ambitious celestial being Ego.",
-                "poster": "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
-                "imdbRating": 7.6,
+                "plot": "A fictionalized chronicle of the inner life of Marilyn Monroe.",
+                "poster": "https://images.hdqwalls.com/download/blonde-ana-de-armas-8n-3840x2160.jpg",
+                "imdbRating": 5.6,
             },
             {
                 "id": 4,
-                "name": "Guardians of the Galaxy Vol. 2",
+                "name": "Avatar",
                 "year": "2017",
-                "runtime": "136 min",
+                "runtime": "102 min",
                 "categories":[
                     {"id":1, "name":"Action"},
-                    {"id":2, "name":"Adventure"},
-                    {"id":3, "name":"Comedy"}
+                    {"id":2, "name":"Adventure"}
                 ] ,
                 "plot": "The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father the ambitious celestial being Ego.",
-                "poster": "https://reviewsofthingsandstuff.files.wordpress.com/2010/07/inception-poster-sideways.jpg",
-                "imdbRating": 7.6,
+                "poster": "https://www.webtekno.com/images/editor/default/0002/88/bb337955063f1cb6da122d18e15c64ee0eb147d5.jpeg",
+                "imdbRating": 7.8,
             }
 
         ],
