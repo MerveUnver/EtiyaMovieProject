@@ -9,6 +9,9 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms'; 
 import { FilterMoviePipe } from './pipes/filter-movie.pipe';
+import { MainLayoutComponent } from './components/main-layout/main-layout/main-layout.component';
+import { UserInfoComponent } from './components/user-info/user-info/user-info.component';
+import { InfoTitleComponent } from './components/info-title/info-title/info-title.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { FilterMoviePipe } from './pipes/filter-movie.pipe';
     CategoryListComponent,
     MovieListComponent,
     MovieCardComponent,
-    FilterMoviePipe
+    FilterMoviePipe,
+    MainLayoutComponent,
+    UserInfoComponent,
+    InfoTitleComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +39,10 @@ import { FilterMoviePipe } from './pipes/filter-movie.pipe';
     CategoryListComponent,
     MovieCardComponent,
     MovieListComponent,
-    FilterMoviePipe
+    FilterMoviePipe,
+    MainLayoutComponent,
+    UserInfoComponent,
+    InfoTitleComponent
   ]
 })
 export class SharedModule { }

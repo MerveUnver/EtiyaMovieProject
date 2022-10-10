@@ -5,11 +5,13 @@ import { CommonModule } from '@angular/common';
 
 import { MoviesRoutingModule } from './movies-routing.module';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { AddMovieComponent } from './pages/add-movie/add-movie.component';
 
 
 @NgModule({
   declarations: [
-    HomepageComponent
+    HomepageComponent,
+    AddMovieComponent
   ],
   imports: [
     CommonModule,
