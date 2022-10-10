@@ -47,6 +47,6 @@ export class AddMovieComponent implements OnInit {
   }
   save() {
     
-    this.router.navigateByUrl('');
+    this.router.navigateByUrl('/homepage');
   }
 }
