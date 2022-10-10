@@ -8,6 +8,7 @@ import Movie from '../models/movie';
   providedIn: 'root'
 })
 export class MoviesService {
+ 
   apiControllerUrl: string = `${environment.apiUrl}/movies`
   constructor(private httpClient:HttpClient) { }
 

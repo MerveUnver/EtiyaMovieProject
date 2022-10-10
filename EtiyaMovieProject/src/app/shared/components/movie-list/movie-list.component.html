@@ -1,13 +1,11 @@
 <ng-template [ngIf]="movieList">
   <div *ngIf="movieList.length > 0; else emptyMovie">
     <div class="e-input-container">
-      <h4>MOVİES</h4>
+      <h4 class="e-title">MOVİES</h4>
       <input
         type="text"
-        etiyainput="white"
         formcontrolname="search"
         placeholder="Search a Movie"
-        ng-reflect-etiya-input="white"
         ng-reflect-name="search"
         ng-reflect-ng-class="[object Object]"
         class="e-input-white ng-untouched ng-pristine ng-invalid"
