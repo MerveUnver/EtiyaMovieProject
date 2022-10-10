@@ -6,6 +6,9 @@ import { OverlayTitleComponent } from './components/overlay-title/overlay-title.
 import { CategoryListComponent } from './components/category-list/category-list.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; 
+import { FilterMoviePipe } from './pipes/filter-movie.pipe';
 
 
 @NgModule({
@@ -15,17 +18,22 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
     OverlayTitleComponent,
     CategoryListComponent,
     MovieListComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    FilterMoviePipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
+    
   ],
   exports:[
     NavbarComponent,
     OverlayTitleComponent,
     CategoryListComponent,
     MovieCardComponent,
-    MovieListComponent
+    MovieListComponent,
+    FilterMoviePipe
   ]
 })
 export class SharedModule { }

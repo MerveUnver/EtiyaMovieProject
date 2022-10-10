@@ -1,8 +1,22 @@
 <ng-template [ngIf]="movieList">
   <div *ngIf="movieList.length > 0; else emptyMovie">
-    <h4 class="title">MOVİES</h4>
+    <div class="e-input-container">
+      <h4>MOVİES</h4>
+      <input
+        type="text"
+        etiyainput="white"
+        formcontrolname="search"
+        placeholder="Search a Movie"
+        ng-reflect-etiya-input="white"
+        ng-reflect-name="search"
+        ng-reflect-ng-class="[object Object]"
+        class="e-input-white ng-untouched ng-pristine ng-invalid"
+        [(ngModel)]="filterText"
+      />
+    </div>
+
     <div class="row">
-      <div class="col-4" *ngFor="let m of movieList">
+      <div class="col-4" *ngFor="let m of movieList | filterMovie: filterText">
         <app-movie-card [movie]="m"></app-movie-card>
       </div>
     </div>
