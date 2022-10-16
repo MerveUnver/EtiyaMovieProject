@@ -4,7 +4,7 @@ export default interface Movie{
     runtime:string;
     imdbRating:number;
     poster:string;
-    categories:string[];
-    year:string;
-    plot:string;
+    category:string;
+    year:string
+    plot:string
 }

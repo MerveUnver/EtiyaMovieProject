@@ -17,6 +17,9 @@
   width: 100px;
   height: 50px;
 }
+.e-nav-img:hover {
+cursor: pointer;
+}
 
 .e-nav-lang {
   width: 25px;

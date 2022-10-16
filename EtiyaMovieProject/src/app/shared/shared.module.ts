@@ -12,6 +12,7 @@ import { FilterMoviePipe } from './pipes/filter-movie.pipe';
 import { MainLayoutComponent } from './components/main-layout/main-layout/main-layout.component';
 import { UserInfoComponent } from './components/user-info/user-info/user-info.component';
 import { InfoTitleComponent } from './components/info-title/info-title/info-title.component';
+import { TableInfoComponent } from './components/table-info/table-info.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { InfoTitleComponent } from './components/info-title/info-title/info-titl
     FilterMoviePipe,
     MainLayoutComponent,
     UserInfoComponent,
-    InfoTitleComponent
+    InfoTitleComponent,
+    TableInfoComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +44,8 @@ import { InfoTitleComponent } from './components/info-title/info-title/info-titl
     FilterMoviePipe,
     MainLayoutComponent,
     UserInfoComponent,
-    InfoTitleComponent
+    InfoTitleComponent,
+    TableInfoComponent
   ]
 })
 export class SharedModule { }

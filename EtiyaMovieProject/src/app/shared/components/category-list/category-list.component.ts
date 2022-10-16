@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import Category from 'src/app/features/movies/models/category';
 import { CategoriesService } from 'src/app/features/movies/services/categories.service';
 
@@ -9,6 +9,7 @@ import { CategoriesService } from 'src/app/features/movies/services/categories.s
   styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent implements OnInit {
+  @Output() onBtnClick: any = new EventEmitter()
   categoryList!:Category[];
   constructor(private categoriesService:CategoriesService) { }
 
@@ -26,7 +27,9 @@ export class CategoryListComponent implements OnInit {
   }
 
   getCategoryById(category:Category){
-    console.log(category)
+    this.onBtnClick.emit(category)
+
+    console.log(category.name)
   }
 
 }

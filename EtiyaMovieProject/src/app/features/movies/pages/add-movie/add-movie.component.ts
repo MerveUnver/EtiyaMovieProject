@@ -37,7 +37,7 @@ export class AddMovieComponent implements OnInit {
     this.profileForm = this.formBuilder.group({
       name: [this.movie.name, Validators.required],
       runtime: [this.movie.runtime,Validators.required],
-      categories: [this.movie.categories, Validators.required],
+      categories: [this.movie.category, Validators.required],
       posterUrl: [this.movie.poster, Validators.required],
       year: [this.movie.year, Validators.required],
       imdbRatings: [this.movie.imdbRating],

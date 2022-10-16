@@ -1,5 +1,5 @@
 import { MoviesService } from './../../../features/movies/services/movies.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import Movie from 'src/app/features/movies/models/movie';
 
 @Component({
@@ -8,7 +8,9 @@ import Movie from 'src/app/features/movies/models/movie';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
-  movieList!:Movie[];
+  @Input() movieList!:Movie[];
+
+  //movieList!:Movie[];
   cartItems: any[] =[];
   filterText:string="";
   constructor(private moviesService:MoviesService) { }
@@ -19,8 +21,7 @@ export class MovieListComponent implements OnInit {
     };
   getMovies(){
     this.moviesService.getList().subscribe((response) =>{
-      console.log(response);
-     
+      console.log(response)
       this.movieList = response;  
     })
   }
