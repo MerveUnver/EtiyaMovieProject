@@ -1,0 +1,60 @@
+<div class="e-container">
+  <div>
+    <app-info-title [infoTitle]="'CREATE AN ACCOUNT'"></app-info-title>
+  </div>
+  <div class="e-form">
+    <h5 class="e-title">REGISTER</h5>
+    <p class="e-title">please fill in the blanks</p>
+    <input
+      type="text"
+      formcontrolname="name"
+      placeholder="Name"
+      ng-reflect-name="name"
+      ng-reflect-ng-class="[object Object]"
+      class="e-input-white ng-untouched ng-pristine ng-invalid"
+    />
+    <br />
+    <br />
+    <input
+      type="text"
+      formcontrolname="lastname"
+      placeholder="Lastname"
+      ng-reflect-name="lastname"
+      ng-reflect-ng-class="[object Object]"
+      class="e-input-white ng-untouched ng-pristine ng-invalid"
+    />
+    <br />
+    <br />
+    <input
+      type="text"
+      formcontrolname="email"
+      placeholder="Email"
+      ng-reflect-name="email"
+      ng-reflect-ng-class="[object Object]"
+      class="e-input-white ng-untouched ng-pristine ng-invalid"
+    />
+    <br />
+    <br />
+    <input
+      type="text"
+      formcontrolname="password"
+      placeholder="Password"
+      ng-reflect-name="password"
+      ng-reflect-ng-class="[object Object]"
+      class="e-input-white ng-untouched ng-pristine ng-invalid"
+    />
+    <br />
+    <br />
+    <input
+      type="text"
+      formcontrolname="repassword"
+      placeholder="Repassword"
+      ng-reflect-name="repassword"
+      ng-reflect-ng-class="[object Object]"
+      class="e-input-white ng-untouched ng-pristine ng-invalid"
+    />
+    <button type="submit" routerLink="/add-movie" class="e-btn">
+      REGISTER
+    </button>
+  </div>
+</div>

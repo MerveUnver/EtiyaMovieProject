@@ -1,0 +1,93 @@
+<div class="login-wrapper">
+  <div class="login-background"></div>
+  <div style="justify-content: center; display: flex" class="login-container">
+    <div
+      class="surface-card border-round w-full lg:w-6 login-general-container"
+    >
+      <div class="text-center mb-5">
+        <etiya-overlay-title
+          [title]="'WELCOME'"
+          class="login-title1"
+        ></etiya-overlay-title>
+        <etiya-overlay-title
+          [title]="'TO'"
+          class="login-title1"
+        ></etiya-overlay-title>
+        <etiya-overlay-title
+          [title]="'FILMAX'"
+          class="login-title2"
+        ></etiya-overlay-title>
+      </div>
+      <div class="col-7 col-md-12">
+        <p class="e-form-text">
+          Please your enter Username and password to login
+        </p>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div>
+            <div class="form-group">
+              <input
+                [ngClass]="{ 'invalid-input': IsPropertyInvalid('email') }"
+                type="text"
+                class="e-input-white ng-untouched ng-pristine ng-invalid"
+                formControlName="email"
+                ng-reflect-name="email"
+                ng-reflect-ng-class="[object Object]"
+                placeholder="email"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                [ngClass]="{ 'invalid-input': IsPropertyInvalid('password') }"
+                type="text"
+                class="e-input-white ng-untouched ng-pristine ng-invalid"
+                formControlName="password"
+                ng-reflect-name="password"
+                ng-reflect-ng-class="[object Object]"
+                placeholder="password"
+              />
+            </div>
+
+            <button type="submit" (click)="login()" class="e-btn">
+              LOG IN
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<p-toast></p-toast>
+
+<!-- <div class="e-container">
+  <div>
+    <app-info-title [infoTitle]="'WELCOME TO FILMAX'"></app-info-title>
+  </div>
+  <div class="e-form">
+    <h5 class="e-title">LOG IN</h5>
+    <p class="e-title">Please enter your Username and password to login</p>
+
+    <input
+      type="text"
+      formcontrolname="email"
+      placeholder="Email"
+      ng-reflect-name="email"
+      ng-reflect-ng-class="[object Object]"
+      class="e-input-white ng-untouched ng-pristine ng-invalid"
+      [(ngModel)]="userLogin.email"
+      required
+    />
+    <br />
+    <br />
+    <input
+      type="text"
+      formcontrolname="password"
+      placeholder="Password"
+      ng-reflect-name="password"
+      ng-reflect-ng-class="[object Object]"
+      class="e-input-white ng-untouched ng-pristine ng-invalid"
+      [(ngModel)]="userLogin.password"
+      required
+    />
+    <button type="submit" (click)="login()" class="e-btn">LOG IN</button>
+  </div>
+</div> -->

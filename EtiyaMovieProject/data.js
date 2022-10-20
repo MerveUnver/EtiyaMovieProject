@@ -57,9 +57,7 @@ module.exports = function(){
             "lastname":"Ünver",
             "email":"merve.unver@etiya.com",
             "password":"1234",
-            "roles":{
-                "id":3, "name":"role-3"
-            } 
+            "roleid":"3"
         }
 
         ],
@@ -73,7 +71,7 @@ module.exports = function(){
             {
               "id": 1,
               "userId": 1,
-              "roleId": 3
+              "roleid": "3"
             }
           ]
     }

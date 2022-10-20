@@ -1,0 +1,108 @@
+<div class="e-offer-selection-container">
+  <div class="e-offer-selection-content">
+    <div class="row">
+      <div class="col-12 col-xl-8 e-offer-selection-center">
+        <app-tab-menu class="e-tab">
+          <div one>
+            <div class="d-flex justify-content-center">
+              <div class="row w-100" style="width: 95% !important">
+                <app-table-info class="e-table">
+                  <thead>
+                    <tr class="table-title">
+                      <th class="col-2">Name</th>
+                      <th class="col-2">Lastname</th>
+                      <th class="col-2">Email</th>
+                      <th class="col-2">Role</th>
+                      <th class="col-2">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                    <tr
+                      *ngIf="!userList || userList.length == 0; else userLists"
+                    >
+                      <th></th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="e-btn-remove"></button>
+                      </td>
+                    </tr>
+                    <ng-template #userLists>
+                      <tr *ngFor="let u of userList">
+                        <th>{{ u.name }}</th>
+                        <td>{{ u.lastname }}</td>
+                        <td>{{ u.email }}</td>
+                        <td>{{ u.roleid }}</td>
+                        <td>
+                          <button
+                            type="button"
+                            (click)="deleteUser(u.id)"
+                            class="btn btn-danger"
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    </ng-template>
+                  </tbody>
+                </app-table-info>
+              </div>
+            </div>
+
+            <div two>
+              <div class="d-flex justify-content-center">
+                <div class="row w-100" style="width: 95% !important">
+                  <app-table-info class="e-table">
+                    <thead>
+                      <tr class="table-title">
+                        <th class="col-2">Name</th>
+                        <th class="col-2">Lastname</th>
+                        <th class="col-2">Email</th>
+                        <th class="col-2">Role</th>
+                        <th class="col-2">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-body">
+                      <tr
+                        *ngIf="
+                          !userList || userList.length == 0;
+                          else userLists
+                        "
+                      >
+                        <th></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                          <button class="e-btn-remove"></button>
+                        </td>
+                      </tr>
+                      <ng-template #userLists>
+                        <tr *ngFor="let u of userList">
+                          <th>{{ u.name }}</th>
+                          <td>{{ u.lastname }}</td>
+                          <td>{{ u.email }}</td>
+                          <td>{{ u.roleid }}</td>
+                          <td>
+                            <button
+                              type="button"
+                              (click)="deleteUser(u.id)"
+                              class="btn btn-danger"
+                            >
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                      </ng-template>
+                    </tbody>
+                  </app-table-info>
+                </div>
+              </div>
+            </div>
+          </div>
+        </app-tab-menu>
+      </div>
+    </div>
+  </div>
+</div>

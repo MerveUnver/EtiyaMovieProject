@@ -25,7 +25,7 @@ export class AuthService {
   constructor(
     private httpClient: HttpClient,
     private localStorageService: LocalStorageService,
-    private jwtHelperService: JwtHelperService,
+    public jwtHelperService: JwtHelperService,
     private router: Router,
     private store: Store<AuthStates>
   ) {}

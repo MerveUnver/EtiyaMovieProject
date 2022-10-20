@@ -1,4 +1,5 @@
-
+import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,6 +8,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { MoviesModule } from './features/movies/movies.module';
 import { UsersModule } from './features/users/users.module';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,10 @@ import { UsersModule } from './features/users/users.module';
     AppRoutingModule,
     SharedModule,
     MoviesModule,
-    UsersModule
-
+    UsersModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

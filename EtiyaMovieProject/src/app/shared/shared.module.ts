@@ -9,11 +9,13 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms'; 
 import { FilterMoviePipe } from './pipes/filter-movie.pipe';
-import { MainLayoutComponent } from './components/main-layout/main-layout/main-layout.component';
 import { UserInfoComponent } from './components/user-info/user-info/user-info.component';
 import { InfoTitleComponent } from './components/info-title/info-title/info-title.component';
 import { TableInfoComponent } from './components/table-info/table-info.component';
-
+import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
+import { WarningMessageComponent } from './components/warning-message/warning-message.component';
+import { CustomToastComponent } from './components/custom-toast/custom-toast.component';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -24,15 +26,18 @@ import { TableInfoComponent } from './components/table-info/table-info.component
     MovieListComponent,
     MovieCardComponent,
     FilterMoviePipe,
-    MainLayoutComponent,
     UserInfoComponent,
     InfoTitleComponent,
-    TableInfoComponent
+    TableInfoComponent,
+    TabMenuComponent,
+    WarningMessageComponent,
+    CustomToastComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ToastModule
     
   ],
   exports:[
@@ -42,10 +47,10 @@ import { TableInfoComponent } from './components/table-info/table-info.component
     MovieCardComponent,
     MovieListComponent,
     FilterMoviePipe,
-    MainLayoutComponent,
     UserInfoComponent,
     InfoTitleComponent,
-    TableInfoComponent
+    TableInfoComponent,
+    TabMenuComponent
   ]
 })
 export class SharedModule { }
