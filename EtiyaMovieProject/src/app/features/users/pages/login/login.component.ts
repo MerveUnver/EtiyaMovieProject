@@ -1,14 +1,9 @@
-import { LocalStorageService } from './../../../../core/storage/services/local-storage/local-storage.service';
-import { MessageService, PrimeNGConfig } from 'primeng/api';
+import { LocalStorageService } from 'src/app/core/storage/services/local-storage/local-storage.service';
 import { AuthService } from './../../../../core/auth/services/auth/auth.service';
-
-import { HttpClient } from '@angular/common/http';
+import { MessageService, PrimeNGConfig } from 'primeng/api';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Component,  OnInit } from '@angular/core';
-import UserLogin from '../../models/userLogin';
-import { ToastrService } from 'ngx-toastr';
-
 
 @Component({
   templateUrl: './login.component.html',
@@ -27,7 +22,6 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private messageService: MessageService,
     private primengConfig: PrimeNGConfig,
-    private localStorageService: LocalStorageService
 
   ) { }
   ngOnInit(): void {   
@@ -78,21 +72,12 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  forgotPassword() {
-    this.messageService.add({
-      detail: 'Please contact your system administrator',
-      severity: 'info',
-      summary: 'Forgot password?',
-      key: 'etiya-custom',
-      sticky: true,
-    });
-  }
-
   IsPropertyInvalid(name: string) {
     return (
       this.loginForm.get(name)?.touched &&
       this.loginForm.get(name)?.hasError('required')
     );
+    
   }
 
   fieldsChange(values: any): void {

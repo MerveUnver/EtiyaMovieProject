@@ -1,8 +1,8 @@
-import { Store } from '@ngrx/store';
-import { JwtHelperService } from '@auth0/angular-jwt';
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { Store } from '@ngrx/store';
 import { map, Observable, Subject } from 'rxjs';
 import { LocalStorageService } from 'src/app/core/storage/services/local-storage/local-storage.service';
 import { environment } from 'src/environments/environment';
@@ -25,7 +25,7 @@ export class AuthService {
   constructor(
     private httpClient: HttpClient,
     private localStorageService: LocalStorageService,
-    public jwtHelperService: JwtHelperService,
+    private jwtHelperService: JwtHelperService,
     private router: Router,
     private store: Store<AuthStates>
   ) {}

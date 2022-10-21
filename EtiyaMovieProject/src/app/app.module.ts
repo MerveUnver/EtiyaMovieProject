@@ -1,4 +1,4 @@
-import { CoreModule } from './core/core.module';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { MoviesModule } from './features/movies/movies.module';
 import { UsersModule } from './features/users/users.module';
 import { ToastrModule } from 'ngx-toastr';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
