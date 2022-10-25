@@ -20,4 +20,7 @@ export class UserService {
   delete(id:number):Observable<User>{
     return this.httpClient.delete<User>(`${this.apiControllerUrl}/${id}`)
   }
+  add(user:User): Observable<User>{
+    return this.httpClient.post<User>(this.apiControllerUrl,user);
+  }
 }
