@@ -14,7 +14,6 @@ export class LoginComponent implements OnInit {
  
   loginForm!: FormGroup;
   loginCount: number = 0;
-  rememberMe: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -22,12 +21,14 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private messageService: MessageService,
     private primengConfig: PrimeNGConfig,
+   
 
   ) { }
   ngOnInit(): void {   
     
     this.createLoginForm();
-    this.primengConfig.ripple = true;}
+    this.primengConfig.ripple = true;
+  }
 
   createLoginForm() {
     this.loginForm = this.formBuilder.group({
@@ -79,10 +80,4 @@ export class LoginComponent implements OnInit {
     );
     
   }
-
-  fieldsChange(values: any): void {
-    console.log(values.currentTarget.checked);
-    this.rememberMe = values.currentTarget.checked;
-  }
-
 }

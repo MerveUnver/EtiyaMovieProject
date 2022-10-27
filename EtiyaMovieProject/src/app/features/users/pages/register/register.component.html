@@ -1,4 +1,4 @@
-<div class="e-container">
+<!-- <div class="e-container">
   <div>
     <app-info-title [infoTitle]="'CREATE AN ACCOUNT'"></app-info-title>
   </div>
@@ -6,12 +6,7 @@
     <h5 class="e-title">REGISTER</h5>
     <p class="e-title">please fill in the blanks</p>
   </div>
-  <form
-    class="e-form"
-    *ngIf="registerForm"
-    [formGroup]="registerForm"
-    (ngSubmit)="save()"
-  >
+  <form class="e-form" [formGroup]="registerForm" (ngSubmit)="save()">
     <div>
       <div class="mb-3">
         <input
@@ -62,4 +57,83 @@
       </div>
     </div>
   </form>
+</div> -->
+<div class="login-wrapper">
+  <div class="login-background"></div>
+  <div style="justify-content: center; display: flex" class="login-container">
+    <div
+      class="surface-card border-round w-full lg:w-6 login-general-container"
+    >
+      <div class="text-center mb-5">
+        <etiya-overlay-title
+          [title]="'CREATE'"
+          class="login-title1"
+        ></etiya-overlay-title>
+        <etiya-overlay-title
+          [title]="'AN'"
+          class="login-title1"
+        ></etiya-overlay-title>
+        <etiya-overlay-title
+          [title]="'ACCOUNT'"
+          class="login-title2"
+        ></etiya-overlay-title>
+      </div>
+      <div class="col-7 col-md-12">
+        <p class="e-form-text">Please fill the blanks</p>
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+          <div>
+            <div class="form-group">
+              <input
+                [ngClass]="{ 'invalid-input': IsPropertyInvalid('name') }"
+                type="text"
+                class="e-input-white ng-untouched ng-pristine ng-invalid"
+                formControlName="name"
+                ng-reflect-name="name"
+                ng-reflect-ng-class="[object Object]"
+                placeholder="name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                [ngClass]="{ 'invalid-input': IsPropertyInvalid('lastName') }"
+                type="text"
+                class="e-input-white ng-untouched ng-pristine ng-invalid"
+                formControlName="lastName"
+                ng-reflect-name="lastName"
+                ng-reflect-ng-class="[object Object]"
+                placeholder="lastName"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                [ngClass]="{ 'invalid-input': IsPropertyInvalid('email') }"
+                type="text"
+                class="e-input-white ng-untouched ng-pristine ng-invalid"
+                formControlName="email"
+                ng-reflect-name="email"
+                ng-reflect-ng-class="[object Object]"
+                placeholder="email"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                [ngClass]="{ 'invalid-input': IsPropertyInvalid('password') }"
+                type="text"
+                class="e-input-white ng-untouched ng-pristine ng-invalid"
+                formControlName="password"
+                ng-reflect-name="password"
+                ng-reflect-ng-class="[object Object]"
+                placeholder="password"
+              />
+            </div>
+
+            <button type="submit" (click)="register()" class="e-btn">
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
+<p-toast></p-toast>

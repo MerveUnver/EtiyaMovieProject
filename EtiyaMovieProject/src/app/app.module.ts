@@ -1,3 +1,4 @@
+import { MessageService } from 'primeng/api';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  HttpClientModule } from '@angular/common/http';

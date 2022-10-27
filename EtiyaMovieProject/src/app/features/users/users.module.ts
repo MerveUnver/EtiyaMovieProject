@@ -1,3 +1,4 @@
+import { MessageService } from 'primeng/api';
 import { LocalStorageService } from './../../core/storage/services/local-storage/local-storage.service';
 import { JwtModule, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { ToastModule } from 'primeng/toast';
@@ -26,7 +27,7 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     ToastModule,
-  
-  ]
+  ],
+  providers:[MessageService]
 })
 export class UsersModule { }
