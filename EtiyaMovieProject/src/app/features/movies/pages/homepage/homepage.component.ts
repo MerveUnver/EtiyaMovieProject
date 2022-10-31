@@ -1,3 +1,4 @@
+import { AuthService } from './../../../../core/auth/services/auth/auth.service';
 import { MoviesService } from './../../services/movies.service';
 import { Component, Input, OnInit } from '@angular/core';
 import Movie from '../../models/movie';
@@ -9,7 +10,11 @@ import Category from '../../models/category';
 })
 export class HomepageComponent implements OnInit {
   movies!:Movie[]
-  constructor(private moviesService:MoviesService) { }
+  name!:String;
+  constructor(private moviesService:MoviesService, private authService:AuthService) { 
+    this.name=authService.getUser.name+" "+authService.getUser.lastName;
+  
+  }
 
   ngOnInit(): void {
   }

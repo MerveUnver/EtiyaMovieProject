@@ -1,3 +1,4 @@
+import { AuthService } from './../../../../core/auth/services/auth/auth.service';
 import { MoviesService } from './../../services/movies.service';
 import { Component, OnInit } from '@angular/core';
 import Movie from '../../models/movie';
@@ -8,13 +9,16 @@ import Movie from '../../models/movie';
 })
 export class MyContentComponent implements OnInit {
 myMovieList!:Movie[];
-  constructor(private moviesService:MoviesService) { }
+  constructor(private moviesService:MoviesService,
+    private  authService:AuthService) { }
 
   ngOnInit(): void {
+    this.getMovies();
   }
   getMovies(){
     this.moviesService.getList().subscribe((response) =>{
-      this.myMovieList = response;
+      this.myMovieList = response.filter(p=>p.userId==this.authService.getUser.id);
+      console.log(this.myMovieList)
     })
   }
   deleteMovie(id:number){

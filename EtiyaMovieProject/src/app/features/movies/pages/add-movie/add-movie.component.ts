@@ -10,6 +10,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import Movie from '../../models/movie';
+import { AuthService } from 'src/app/core/auth/services/auth/auth.service';
 
 
 @Component({
@@ -24,7 +25,8 @@ export class AddMovieComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     private moviesService: MoviesService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private  authService:AuthService
   ) {}
 
   ngOnInit(): void {
@@ -33,10 +35,10 @@ export class AddMovieComponent implements OnInit {
 
   createFormAddMovie() {
     this.movieForm = this.formBuilder.group({
-       name: [this.movie?.name, Validators.required],
+      name: [this.movie?.name, Validators.required],
       runtime: [this.movie?.runtime,Validators.required],
       categories: [this.movie?.category, Validators.required],
-      poster: [this.movie?.poster, Validators.required],
+      poster: [this.movie?.poster],
       year: [this.movie?.year, Validators.required],
       imdbRatings: [this.movie?.imdbRating],
       plot: [this.movie?.plot],
@@ -51,13 +53,15 @@ export class AddMovieComponent implements OnInit {
     }
 
     const movie:Movie = {
+
       ...this.movieForm.value,
+      userId:this.authService.getUser.id
     }
 
     this.moviesService.add(movie).subscribe(() =>{
       setTimeout(() => {
         this.toastr.success("Movie succesfully add!","Add")
-        this.router.navigateByUrl("/homepage");
+        this.router.navigateByUrl("/my-content");
       }, 1000);
     })
   }

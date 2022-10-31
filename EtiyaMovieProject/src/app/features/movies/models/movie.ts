@@ -7,4 +7,5 @@ export default interface Movie{
     category:string;
     year:string
     plot:string
+    userId:number
 }

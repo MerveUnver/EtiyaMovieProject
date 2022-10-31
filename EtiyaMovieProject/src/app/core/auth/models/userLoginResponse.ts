@@ -1,5 +1,10 @@
 import { ResultModel } from '../../models/resultModel';
 
 export interface UserLoginResponse extends ResultModel {
-  access_token: string;
+  success: true,
+  access_token: string,
+  name:string,
+  lastName:string,
+  id:number,
+  roleId:number
 }

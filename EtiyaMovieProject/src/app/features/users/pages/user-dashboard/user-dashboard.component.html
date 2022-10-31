@@ -26,7 +26,16 @@
                       <th></th>
                       <td></td>
                       <td></td>
-                      <td></td>
+                      <td>
+                        <div class="e-dropdown">
+                          <select name="role" id="role" formControlName="role">
+                            <option selected value="Role-1">Role-1</option>
+                            <option value="Role-2">Role-2</option>
+                            <option value="Role-3">Role-3</option>
+                          </select>
+                        </div>
+                      </td>
+
                       <td>
                         <button class="e-btn-remove"></button>
                       </td>
@@ -34,9 +43,9 @@
                     <ng-template #waitingUserLists>
                       <tr *ngFor="let u of waitingUserList">
                         <th>{{ u.name }}</th>
-                        <td>{{ u.lastname }}</td>
+                        <td>{{ u.lastName }}</td>
                         <td>{{ u.email }}</td>
-                        <td>{{ u.roleid }}</td>
+                        <td>{{ u.roleName }}</td>
                         <td>
                           <button
                             type="button"
@@ -81,17 +90,15 @@
                     <ng-template #userLists>
                       <tr *ngFor="let u of userList">
                         <th>{{ u.name }}</th>
-                        <td>{{ u.lastname }}</td>
+                        <td>{{ u.lastName }}</td>
                         <td>{{ u.email }}</td>
-                        <td>{{ u.roleid }}</td>
+                        <td>{{ u.roleName }}</td>
                         <td>
                           <button
                             type="button"
                             (click)="deleteUser(u.id)"
-                            class="btn btn-danger"
-                          >
-                            Delete
-                          </button>
+                            class="e-btn-remove"
+                          ></button>
                         </td>
                       </tr>
                     </ng-template>
