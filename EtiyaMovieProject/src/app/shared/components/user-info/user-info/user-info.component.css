@@ -15,11 +15,11 @@ div {
     font-family: 'Anybody';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 21px;
+    font-size: 50px;
+    line-height: 50px;
     /* identical to box height */
   
-    color: #ffffff;
+    color: #ffffff!important;
   }
   
   .image {
@@ -27,18 +27,17 @@ div {
     height: 40px;
   }
   
-  .user-info {
+  .btn-user-info {
     width: 145px;
     height: 27px;
     left: 122px;
     top: 144px;
-  
     font-family: 'Anybody';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-  
+    font-size: 15px;
+    background-color:#242440;
+    border: #242440;
     color: #ffffff;
   }
   

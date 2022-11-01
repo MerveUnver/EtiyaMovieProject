@@ -3,8 +3,45 @@
     <div class="col-3 p-0">
       <img class="image" src="../../../../../assets/img/Vector.png" alt="" />
     </div>
-    <div class="col-9 d-flex align-items-center">
-      <p class="user-info m-0">ROSE WALTER</p>
+    <!-- <div class="col-9 d-flex align-items-center">
+       <button class="btn-user-info m-0">
+        {{ userName }}
+      </button> 
+    </div> -->
+    <!-- <a class="navbar-brand" href="#">ETİYA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/homepage" routerLinkActive="active">Home Page</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/add-product" routerLinkActive="active">Add Product</a>
+           <button [routerLink]="'url'"> Button Label</button>
+        </li> -->
+    <div class="dropdown">
+      <button
+        class="btn-user-info"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        {{ userName }}
+      </button>
+
+      <ul class="dropdown-menu">
+        <li>
+          <button class="dropdown-item" routerLink="/my-content">
+            Content
+          </button>
+        </li>
+        <li><a class="dropdown-item" href="#">User Dashboard</a></li>
+        <li>
+          <button class="dropdown-item" (click)="logOut()">Log Out</button>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

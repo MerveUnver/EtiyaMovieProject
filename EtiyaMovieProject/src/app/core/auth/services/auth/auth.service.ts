@@ -80,7 +80,7 @@ return this.userModel
 
   logOut() {
     this.localStorageService.remove('token');
-    this.localStorageService.remove('user');
+     this.localStorageService.remove('user');
     this.router.navigateByUrl('/login');
    
   }
