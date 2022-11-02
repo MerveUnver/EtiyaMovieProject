@@ -11,6 +11,7 @@ import RegisterUser from '../../models/registerUser';
 export class UserDashboardComponent implements OnInit {
   userList!:User[];
   waitingUserList!:RegisterUser[];
+  
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {
@@ -40,7 +41,10 @@ export class UserDashboardComponent implements OnInit {
       this.waitingUserList = response;
     })
   }
+
   deleteWaitingUser(id:number){
+    var user= this.waitingUserList.filter(f=>f.id==id)[0];
+   
     if(confirm("Are you sure want to delete?")){
       this.userService.deleteWaitingusers(id).subscribe(()=>{
         setTimeout(() => {
@@ -50,5 +54,19 @@ export class UserDashboardComponent implements OnInit {
     } 
   }
 
+  acceptWaitingUser(id:number){
+    var user= this.waitingUserList.filter(f=>f.id==id)[0];
+    this.userService.add(user).subscribe();
+    this.userService.deleteWaitingusers(id).subscribe()
+   }
+  updateUserRole(id:number,roleName:string){
+   
+ var user= this.waitingUserList.filter(f=>f.id==id);
+ if(user){
+  var selectedUser=user[0]
+  selectedUser.roleName= "role-" + roleName
+ }
+  }
+ 
  
 }

@@ -9,8 +9,6 @@ import Movie from 'src/app/features/movies/models/movie';
 })
 export class MovieListComponent implements OnInit {
   @Input() movieList!:Movie[];
-
-  //movieList!:Movie[];
   cartItems: any[] =[];
   filterText:string="";
   constructor(private moviesService:MoviesService) { }

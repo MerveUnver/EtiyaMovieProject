@@ -7,24 +7,24 @@ import { AuthService } from './services/auth/auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class IsRole3Guard implements CanActivate {
+export class Role2Guard implements CanActivate {
   constructor(private authService: AuthService, private router: Router,private toastrService:ToastrService
-  ){}
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ):
-    | Observable<boolean | UrlTree>
-    | Promise<boolean | UrlTree>
-    | boolean
-    | UrlTree {
-    if (this.authService.getUser.roleId!=3) {
-      this.router.navigateByUrl('/homepage')
-      this.toastrService.warning('err')
-      return false;
+    ){}
+    canActivate(
+      route: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot
+    ):
+      | Observable<boolean | UrlTree>
+      | Promise<boolean | UrlTree>
+      | boolean
+      | UrlTree {
+      if (this.authService.userModel.roleId!=2) {
+        this.router.navigateByUrl('homepage')
+        this.toastrService.warning('err')
+        return false;
+      }
+  
+      return true 
     }
-
-    return true 
-  }
   
 }

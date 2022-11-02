@@ -7,13 +7,15 @@ import { MoviesRoutingModule } from './movies-routing.module';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AddMovieComponent } from './pages/add-movie/add-movie.component';
 import { MyContentComponent } from './pages/my-content/my-content.component';
+import { ContentComponent } from './pages/content/content.component';
 
 
 @NgModule({
   declarations: [
     HomepageComponent,
     AddMovieComponent,
-    MyContentComponent
+    MyContentComponent,
+    ContentComponent
   ],
   imports: [
     CommonModule,

@@ -45,13 +45,14 @@ register(){
 
   const registerUser:RegisterUser = {
     ...this.registerForm.value,
+    roleId:1
   }
 
   this.userService.addRegisterUser(registerUser).subscribe(() =>{
     setTimeout(() => {
       
       this.toastr.success("User succesfully add!","Add")
-      this.router.navigateByUrl("/user-dashboard");
+      this.router.navigateByUrl("/login");
     }, 1000);
   })
 }

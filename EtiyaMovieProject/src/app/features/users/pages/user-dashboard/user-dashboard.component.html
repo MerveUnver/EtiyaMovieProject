@@ -27,15 +27,7 @@
                       <th></th>
                       <td></td>
                       <td></td>
-                      <td>
-                        <div class="e-dropdown">
-                          <select name="role" id="role" formControlName="role">
-                            <option selected value="Role-1">Role-1</option>
-                            <option value="Role-2">Role-2</option>
-                            <option value="Role-3">Role-3</option>
-                          </select>
-                        </div>
-                      </td>
+                      <td></td>
 
                       <td>
                         <button class="e-btn-remove"></button>
@@ -46,15 +38,32 @@
                         <th>{{ u.name }}</th>
                         <td>{{ u.lastName }}</td>
                         <td>{{ u.email }}</td>
-                        <td>{{ u.roleName }}</td>
+                        <td>
+                          <div class="e-dropdown">
+                            <select
+                              class="e-select"
+                              #role
+                              (change)="updateUserRole(u.id, role.value)"
+                              id=""
+                            >
+                              <option selected value="1">Role-1</option>
+                              <option value="2">Role-2</option>
+                              <option value="3">Role-3</option>
+                            </select>
+                          </div>
+                        </td>
+
                         <td>
                           <button
                             type="button"
+                            (click)="acceptWaitingUser(u.id)"
+                            class="e-btn-accept"
+                          ></button>
+                          <button
+                            type="button"
                             (click)="deleteWaitingUser(u.id)"
-                            class="btn btn-danger"
-                          >
-                            Delete
-                          </button>
+                            class="e-btn-remove"
+                          ></button>
                         </td>
                       </tr>
                     </ng-template>

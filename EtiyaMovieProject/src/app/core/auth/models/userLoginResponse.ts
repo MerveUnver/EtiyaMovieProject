@@ -6,5 +6,5 @@ export interface UserLoginResponse extends ResultModel {
   name:string,
   lastName:string,
   id:number,
-  roleId:number
+  roleId?:number
 }

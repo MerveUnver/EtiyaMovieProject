@@ -1,4 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { MoviesService } from './../../../features/movies/services/movies.service';
+import Movie from 'src/app/features/movies/models/movie';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import Category from 'src/app/features/movies/models/category';
 import { CategoriesService } from 'src/app/features/movies/services/categories.service';
 
@@ -10,8 +12,9 @@ import { CategoriesService } from 'src/app/features/movies/services/categories.s
 })
 export class CategoryListComponent implements OnInit {
   @Output() onBtnClick: any = new EventEmitter()
+  @Input() movieList!:Movie[];
   categoryList!:Category[];
-  constructor(private categoriesService:CategoriesService) { }
+  constructor(private categoriesService:CategoriesService,private moviesService:MoviesService) { }
 
   ngOnInit(): void {
 

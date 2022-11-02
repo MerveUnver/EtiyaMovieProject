@@ -68,54 +68,6 @@
  box-sizing: border-box;
  padding-left: 20px;
 }
-.login-general-container {
-  background-color: transparent !important;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-}
-
-.login-title1 {
-  color: #ffff !important;
-}
-
-.login-title2 {
-  color: #f5821f !important;
-}
-
-.text-900 {
-  color: #f5821f !important;
-}
-
-.text-600 {
-  color: #f5821f !important;
-}
-
-.text-500 {
-  color: white !important;
-}
-
-.e-check-label {
-  font-family: 'Anybody';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 17px;
-
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.e-forgot-password {
-  font-family: 'Anybody';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 17px;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
-}
 
 .e-form-text {
   font-family: 'Anybody';
@@ -145,4 +97,25 @@
 .invalid-input::placeholder {
   color: red;
 }
+.e-btn-logIn{
+  background-color: #242440;
+  border: none;
+  color: #ffffff;
+}
+.e-container{
+  display: flex;
+  justify-content: space-between;
+}
+.e-title{
+color: #FFFFFF;
+}
 
+.e-form{
+margin-top: 300px;
+margin-right: 10%;
+}
+.e-register-container{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

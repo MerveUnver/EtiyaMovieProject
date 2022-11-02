@@ -3,6 +3,7 @@ export default interface RegisterUser  {
     lastName:string;
     email:string;
     password:string;
-    roleName:string;
+    roleId:number;
     id:number;
+    roleName:string;
     }

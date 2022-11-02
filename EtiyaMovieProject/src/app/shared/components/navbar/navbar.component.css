@@ -12,12 +12,16 @@
   align-items: center;
 }
 
-.e-nav-img {
+.e-btn-logo {
   margin-left: 10%;
   width: 100px;
   height: 50px;
+  background-image:url('../../../../assets/img/logo.png') ;
+  background-position: center;
+  background-size: cover;
+  border: #242440;
 }
-.e-nav-img:hover {
+.e-btn-logo:hover {
 cursor: pointer;
 }
 
