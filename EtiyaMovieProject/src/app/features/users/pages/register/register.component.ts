@@ -42,10 +42,12 @@ register(){
     this.toastr.warning("Please fill the required areas!!!","Add")
     return;
   }
-
+ 
   const registerUser:RegisterUser = {
     ...this.registerForm.value,
-    roleId:1
+    roleId:1,
+    roleName:"role-1",
+    isRegistered:false
   }
 
   this.userService.addRegisterUser(registerUser).subscribe(() =>{

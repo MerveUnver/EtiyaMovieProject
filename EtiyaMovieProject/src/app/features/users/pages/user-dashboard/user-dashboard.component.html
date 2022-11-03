@@ -7,68 +7,80 @@
           <div one>
             <div class="d-flex justify-content-center">
               <div class="row w-100" style="width: 95% !important">
-                <app-table-info class="e-table">
-                  <thead>
-                    <tr class="table-title">
-                      <th class="col-2">Name</th>
-                      <th class="col-2">Lastname</th>
-                      <th class="col-2">Email</th>
-                      <th class="col-2">Role</th>
-                      <th class="col-2">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody class="table-body">
-                    <tr
-                      *ngIf="
-                        !waitingUserList || waitingUserList.length == 0;
-                        else waitingUserLists
-                      "
-                    >
-                      <th></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-
-                      <td>
-                        <button class="e-btn-remove"></button>
-                      </td>
-                    </tr>
-                    <ng-template #waitingUserLists>
-                      <tr *ngFor="let u of waitingUserList">
-                        <th>{{ u.name }}</th>
-                        <td>{{ u.lastName }}</td>
-                        <td>{{ u.email }}</td>
-                        <td>
-                          <div class="e-dropdown">
-                            <select
-                              class="e-select"
-                              #role
-                              (change)="updateUserRole(u.id, role.value)"
-                              id=""
-                            >
-                              <option selected value="1">Role-1</option>
-                              <option value="2">Role-2</option>
-                              <option value="3">Role-3</option>
-                            </select>
-                          </div>
-                        </td>
+                <div
+                  class="warning"
+                  *ngIf="
+                    !waitingUserList || waitingUserList.length == 0;
+                    else tableInfo
+                  "
+                >
+                  <img class="e-warning-img" />
+                  <p class="e-form-text">Could not find any data</p>
+                </div>
+                <ng-template #tableInfo>
+                  <app-table-info class="e-table">
+                    <thead>
+                      <tr class="table-title">
+                        <th class="col-2">Name</th>
+                        <th class="col-2">Lastname</th>
+                        <th class="col-2">Email</th>
+                        <th class="col-2">Role</th>
+                        <th class="col-2">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-body">
+                      <tr
+                        *ngIf="
+                          !waitingUserList || waitingUserList.length == 0;
+                          else waitingUserLists
+                        "
+                      >
+                        <th></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
 
                         <td>
-                          <button
-                            type="button"
-                            (click)="acceptWaitingUser(u.id)"
-                            class="e-btn-accept"
-                          ></button>
-                          <button
-                            type="button"
-                            (click)="deleteWaitingUser(u.id)"
-                            class="e-btn-remove"
-                          ></button>
+                          <button class="e-btn-remove"></button>
                         </td>
                       </tr>
-                    </ng-template>
-                  </tbody>
-                </app-table-info>
+                      <ng-template #waitingUserLists>
+                        <tr *ngFor="let u of waitingUserList">
+                          <th>{{ u.name }}</th>
+                          <td>{{ u.lastName }}</td>
+                          <td>{{ u.email }}</td>
+                          <td>
+                            <div class="e-dropdown">
+                              <select
+                                class="e-select"
+                                #role
+                                (change)="updateUserRole(u.id, role.value)"
+                                id=""
+                              >
+                                <option selected value="1">Role-1</option>
+                                <option value="2">Role-2</option>
+                                <option value="3">Role-3</option>
+                              </select>
+                            </div>
+                          </td>
+
+                          <td>
+                            <button
+                              type="button"
+                              (click)="acceptWaitingUser(u.id)"
+                              class="e-btn-accept"
+                            ></button>
+                            <button
+                              type="button"
+                              (click)="deleteWaitingUser(u.id)"
+                              class="e-btn-remove"
+                            ></button>
+                          </td>
+                        </tr>
+                      </ng-template>
+                    </tbody>
+                  </app-table-info>
+                </ng-template>
               </div>
             </div>
           </div>

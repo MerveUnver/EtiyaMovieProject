@@ -6,4 +6,5 @@ export default interface RegisterUser  {
     roleId:number;
     id:number;
     roleName:string;
+    isRegistered:boolean;
     }

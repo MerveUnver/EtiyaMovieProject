@@ -22,3 +22,26 @@
     height: 51px;
     background-size: cover;
   }
+  .e-form-text {
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+  height: auto;
+    color: #ffffff;
+  
+    opacity: 0.9;
+  }
+  .e-warning-img{
+    background-image: url("../../../../../assets/img/warning.PNG");
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+  }
+  .warning{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }

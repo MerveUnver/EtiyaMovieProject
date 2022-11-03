@@ -12,17 +12,12 @@ import { CategoriesService } from 'src/app/features/movies/services/categories.s
 })
 export class CategoryListComponent implements OnInit {
   @Output() onBtnClick: any = new EventEmitter()
-  @Input() movieList!:Movie[];
   categoryList!:Category[];
   constructor(private categoriesService:CategoriesService,private moviesService:MoviesService) { }
 
   ngOnInit(): void {
-
       this.getCategories();
-    ;
-    
   }
-
   getCategories(){
     this.categoriesService.getList().subscribe((response) =>{
       this.categoryList = response;
@@ -30,8 +25,7 @@ export class CategoryListComponent implements OnInit {
   }
 
   getCategoryById(category:Category){
-    this.onBtnClick.emit(category)
-
+    this.onBtnClick.emit(category);
     console.log(category.name)
   }
 

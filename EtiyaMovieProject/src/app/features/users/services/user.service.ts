@@ -37,4 +37,10 @@ export class UserService {
     return this.httpClient.delete<RegisterUser>(`${this.apiControllerUrl}/registerUsers/${id}`)
   }
 
+  updateRegisterUser(registerUser:RegisterUser): Observable<RegisterUser>{
+    return this.httpClient.put<RegisterUser>(
+      `${this.apiControllerUrl}/registerUsers/${registerUser.id}`,
+      registerUser
+    );
+  }
 }

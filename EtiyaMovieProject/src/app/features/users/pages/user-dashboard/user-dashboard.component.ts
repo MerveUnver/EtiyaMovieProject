@@ -11,6 +11,7 @@ import RegisterUser from '../../models/registerUser';
 export class UserDashboardComponent implements OnInit {
   userList!:User[];
   waitingUserList!:RegisterUser[];
+  lenght!: number;
   
   constructor(private userService:UserService) { }
 
@@ -38,7 +39,9 @@ export class UserDashboardComponent implements OnInit {
   getWaitingUsers(){
     this.userService.getRegisterList().subscribe((response) =>{
       console.log("waiting users : ", response)
-      this.waitingUserList = response;
+      this.waitingUserList = response.filter(f=>!f.isRegistered);
+      console.log("waiting users2 : ", this.waitingUserList)
+
     })
   }
 
@@ -56,16 +59,24 @@ export class UserDashboardComponent implements OnInit {
 
   acceptWaitingUser(id:number){
     var user= this.waitingUserList.filter(f=>f.id==id)[0];
-    this.userService.add(user).subscribe();
-    this.userService.deleteWaitingusers(id).subscribe()
+    user.isRegistered=true;
+    this.userService.updateRegisterUser(user).subscribe(f => {
+      this.userService.add(user).subscribe(y=> {
+        this.userList.push(y);
+         this.waitingUserList = this.waitingUserList.filter(f=>!f.isRegistered)
+        //window.location.reload()
+      } );
+        
+    });
    }
+
   updateUserRole(id:number,roleName:string){
    
- var user= this.waitingUserList.filter(f=>f.id==id);
- if(user){
-  var selectedUser=user[0]
-  selectedUser.roleName= "role-" + roleName
- }
+   var user= this.waitingUserList.filter(f=>f.id==id);
+   if(user){
+    var selectedUser=user[0]
+    selectedUser.roleName= "role-" + roleName
+    }
   }
  
  
