@@ -67,6 +67,7 @@ export class AuthService {
   }
 get getUser():UserLoginResponse{
   var userJson= this.localStorageService.get('user')
+  console.log(this.userModel)
 if(this.userModel==null && userJson){
   this.userModel =JSON.parse(userJson!.toString())  as UserLoginResponse 
 }

@@ -60,6 +60,7 @@ export class UserDashboardComponent implements OnInit {
   acceptWaitingUser(id:number){
     var user= this.waitingUserList.filter(f=>f.id==id)[0];
     user.isRegistered=true;
+    console.log(user);
     this.userService.updateRegisterUser(user).subscribe(f => {
       this.userService.add(user).subscribe(y=> {
         this.userList.push(y);
@@ -70,12 +71,13 @@ export class UserDashboardComponent implements OnInit {
     });
    }
 
-  updateUserRole(id:number,roleName:string){
+  updateUserRole(id:number,roleId:string){
    
    var user= this.waitingUserList.filter(f=>f.id==id);
    if(user){
     var selectedUser=user[0]
-    selectedUser.roleName= "role-" + roleName
+    selectedUser.roleName= "role-" + roleId
+    selectedUser.roleId = parseInt(roleId)
     }
   }
  

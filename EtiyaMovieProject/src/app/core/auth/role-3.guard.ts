@@ -18,7 +18,8 @@ export class IsRole3Guard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (this.authService.getUser.roleId!=3) {
+     var userRoleId =this.authService.getUser.roleId
+    if (userRoleId!=3) {
       this.router.navigateByUrl('/homepage')
       this.toastrService.warning('err')
       return false;

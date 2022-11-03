@@ -12,7 +12,7 @@ import { ContentComponent } from './pages/content/content.component';
 const routes: Routes = [
  
   { path: 'homepage', component: HomepageComponent,canActivate:[IsAuthenticatedGuard] },
-  { path: 'add-movie', component: AddMovieComponent,canActivate:[IsAuthenticatedGuard,Role2Guard||IsRole3Guard] },
+  { path: 'add-movie', component: AddMovieComponent,canActivate:[IsAuthenticatedGuard,Role2Guard] },
   { path: 'my-content', component: MyContentComponent,canActivate:[IsAuthenticatedGuard,Role2Guard]},
   { path: 'content', component: ContentComponent,canActivate:[IsAuthenticatedGuard,IsRole3Guard]},
 ];

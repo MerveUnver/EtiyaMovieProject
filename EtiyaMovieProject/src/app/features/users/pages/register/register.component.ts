@@ -45,8 +45,8 @@ register(){
  
   const registerUser:RegisterUser = {
     ...this.registerForm.value,
-    roleId:1,
-    roleName:"role-1",
+    //  roleId:1,
+    //  roleName:"role-1",
     isRegistered:false
   }
 

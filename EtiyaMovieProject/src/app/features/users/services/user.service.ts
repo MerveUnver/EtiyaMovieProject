@@ -27,6 +27,7 @@ export class UserService {
   }
 ///////////////denemeeeeeee
   addRegisterUser(registerUser:RegisterUser): Observable<RegisterUser>{
+    console.log(registerUser)
     return this.httpClient.post<RegisterUser>(`${this.apiControllerUrl}/registerUsers`,registerUser);
   }
   getRegisterList():Observable<RegisterUser[]>{

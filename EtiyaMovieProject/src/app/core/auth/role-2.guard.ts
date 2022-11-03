@@ -18,7 +18,8 @@ export class Role2Guard implements CanActivate {
       | Promise<boolean | UrlTree>
       | boolean
       | UrlTree {
-      if (this.authService.userModel.roleId!=2) {
+        var userRoleId =this.authService.getUser.roleId
+      if (userRoleId!=2&&userRoleId!=3) {
         this.router.navigateByUrl('homepage')
         this.toastrService.warning('err')
         return false;
