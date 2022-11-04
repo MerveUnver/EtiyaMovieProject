@@ -2,7 +2,7 @@ export default interface Movie{
 	id: number;
 	name: string;
     runtime:string;
-    imdbRating:number;
+    imdbRating:string;
     poster:string;
     category:string;
     year:string

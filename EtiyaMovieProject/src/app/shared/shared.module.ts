@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -31,7 +32,8 @@ import { ToastModule } from 'primeng/toast';
     TableInfoComponent,
     TabMenuComponent,
     WarningMessageComponent,
-    CustomToastComponent
+    CustomToastComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -50,7 +52,8 @@ import { ToastModule } from 'primeng/toast';
     UserInfoComponent,
     InfoTitleComponent,
     TableInfoComponent,
-    TabMenuComponent
+    TabMenuComponent,
+    NotFoundComponent
   ]
 })
 export class SharedModule { }

@@ -40,7 +40,7 @@ export class AddMovieComponent implements OnInit {
       categories: [this.movie?.category, Validators.required],
       poster: [this.movie?.poster],
       year: [this.movie?.year, Validators.required],
-      imdbRatings: [this.movie?.imdbRating],
+      imdbRating: [this.movie?.imdbRating],
       plot: [this.movie?.plot],
       
     });

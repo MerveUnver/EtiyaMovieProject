@@ -10,45 +10,62 @@
     <div class="d-flex justify-content-center customer-title mb-5">
       <h3 class="e-title">All Content</h3>
     </div>
+
     <div class="d-flex justify-content-center">
       <div class="row w-100" style="width: 95% !important">
-        <app-table-info class="e-table">
-          <thead>
-            <tr class="table-title">
-              <th class="col-2">Movie Name</th>
-              <th class="col-2">ImDb</th>
-              <th class="col-2">Runtime</th>
-              <th class="col-2">Plot</th>
-              <th class="col-2">Action</th>
-            </tr>
-          </thead>
-          <tbody class="table-body">
-            <tr *ngIf="!movieList || movieList.length == 0; else movieLists">
-              <th></th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button class="e-btn-remove"></button>
-              </td>
-            </tr>
-            <ng-template #movieLists>
-              <tr *ngFor="let m of movieList">
-                <th>{{ m.name }}</th>
-                <td>{{ m.imdbRating }}</td>
-                <td>{{ m.runtime }}</td>
-                <td>{{ m.plot }}</td>
+        <div
+          class="warning"
+          *ngIf="!movieList || movieList.length == 0; else tableInfo"
+        >
+          <div>
+            <app-not-found> </app-not-found>
+            <button type="submit" routerLink="/add-movie" class="e-btn">
+              ADD NEW MOVİE
+            </button>
+          </div>
+        </div>
+        <ng-template #tableInfo>
+          <button type="submit" routerLink="/add-movie" class="e-btn">
+            ADD NEW MOVİE
+          </button>
+          <app-table-info class="e-table">
+            <thead>
+              <tr class="table-title">
+                <th class="col-2">Movie Name</th>
+                <th class="col-2">ImDb</th>
+                <th class="col-2">Runtime</th>
+                <th class="col-2">Plot</th>
+                <th class="col-2">Action</th>
+              </tr>
+            </thead>
+            <tbody class="table-body">
+              <tr *ngIf="!movieList || movieList.length == 0; else movieLists">
+                <th></th>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>
-                  <button
-                    type="button"
-                    (click)="deleteMovie(m.id)"
-                    class="e-btn-remove"
-                  ></button>
+                  <button class="e-btn-remove"></button>
                 </td>
               </tr>
-            </ng-template>
-          </tbody>
-        </app-table-info>
+              <ng-template #movieLists>
+                <tr *ngFor="let m of movieList">
+                  <th>{{ m.name }}</th>
+                  <td>{{ m.imdbRating }}</td>
+                  <td>{{ m.runtime }}</td>
+                  <td>{{ m.plot }}</td>
+                  <td>
+                    <button
+                      type="button"
+                      (click)="deleteMovie(m.id)"
+                      class="e-btn-remove"
+                    ></button>
+                  </td>
+                </tr>
+              </ng-template>
+            </tbody>
+          </app-table-info>
+        </ng-template>
       </div>
     </div>
   </div>

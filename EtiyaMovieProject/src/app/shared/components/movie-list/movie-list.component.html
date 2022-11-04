@@ -14,12 +14,17 @@
     </div>
 
     <div class="row">
-      <div class="col-4" *ngFor="let m of movieList | filterMovie: filterText">
+      <div
+        class="col-4"
+        *ngFor="let m of movieList | filterMovie: filterText.toUpperCase()"
+      >
         <app-movie-card [movie]="m"></app-movie-card>
       </div>
     </div>
   </div>
 </ng-template>
 <ng-template #emptyMovie>
-  <div class="alert alert-danger" role="alert">Can not find any movie</div>
+  <div>
+    <app-not-found> </app-not-found>
+  </div>
 </ng-template>

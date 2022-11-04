@@ -1,6 +1,7 @@
 import { MoviesService } from './../../../features/movies/services/movies.service';
 import { Component, Input, OnInit } from '@angular/core';
 import Movie from 'src/app/features/movies/models/movie';
+import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-movie-list',
@@ -23,4 +24,6 @@ export class MovieListComponent implements OnInit {
       this.movieList = response;  
     })
   }
+
+  
 }
