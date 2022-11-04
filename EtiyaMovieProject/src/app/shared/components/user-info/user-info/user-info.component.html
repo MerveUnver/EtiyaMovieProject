@@ -15,21 +15,28 @@
         </button>
 
         <ul class="dropdown-menu">
-          <li>
-            <button class="dropdown-item" (click)="goToMyContent()">
-              My Content
-            </button>
-          </li>
-          <li>
-            <button class="dropdown-item" (click)="goToContent()">
-              Content
-            </button>
-          </li>
-          <li>
-            <button class="dropdown-item" (click)="goToUserDashboard()">
-              User Dashboard
-            </button>
-          </li>
+          <ng-template [ngIf]="roleId == 2">
+            <li>
+              <button class="dropdown-item" (click)="goToMyContent()">
+                My Content
+              </button>
+            </li>
+          </ng-template>
+          <ng-template [ngIf]="roleId == 3">
+            <li>
+              <button class="dropdown-item" (click)="goToContent()">
+                Content
+              </button>
+            </li>
+          </ng-template>
+
+          <ng-template [ngIf]="roleId == 3">
+            <li>
+              <button class="dropdown-item" (click)="goToUserDashboard()">
+                User Dashboard
+              </button>
+            </li>
+          </ng-template>
           <li>
             <button class="dropdown-item" (click)="logOut()">Log Out</button>
           </li>

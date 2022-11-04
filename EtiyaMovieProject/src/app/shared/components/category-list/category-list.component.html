@@ -11,6 +11,11 @@
     <div class="list-group" *ngFor="let ct of categoryList">
       <button
         type="button"
+        style="color: black"
+        [ngClass]="{
+          gray: ct.isSelected,
+          white: !ct.isSelected
+        }"
         (click)="getCategoryById(ct)"
         class="list-group-item list-group-item-action"
       >

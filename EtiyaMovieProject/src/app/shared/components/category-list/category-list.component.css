@@ -3,4 +3,12 @@ button:not(:disabled)
     cursor: pointer;
 }
 
+.gray {
+    background-color: #2A5183;
+    color: aliceblue;
+}
+
+.white {
+    background-color: white;
+}
 
