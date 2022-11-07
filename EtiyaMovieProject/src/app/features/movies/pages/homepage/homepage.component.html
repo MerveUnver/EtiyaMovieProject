@@ -5,9 +5,11 @@
       <app-category-list
         (onBtnClick)="selectedMovie($event)"
       ></app-category-list>
-      <button type="submit" routerLink="/add-movie" class="e-btn">
-        ADD NEW MOVİE
-      </button>
+      <ng-template [ngIf]="roleId != 1">
+        <button type="submit" routerLink="/add-movie" class="e-btn">
+          ADD NEW MOVİE
+        </button>
+      </ng-template>
     </div>
     <div class="col-9">
       <app-movie-list [movieList]="movies"></app-movie-list>

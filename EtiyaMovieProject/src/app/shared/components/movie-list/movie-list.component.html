@@ -1,7 +1,7 @@
 <ng-template [ngIf]="movieList">
   <div *ngIf="movieList.length > 0; else emptyMovie">
     <div class="e-input-container">
-      <h4 class="e-title">MOVİES</h4>
+      <button class="e-btn-movies" (click)="getMovies()">MOVİES</button>
       <input
         type="text"
         formcontrolname="search"

@@ -30,11 +30,29 @@
             placeholder="password"
             style="margin-top: 7px"
           />
-        </div>
-        <div>
+
+          <!-- 
+          <div class="e-register-container">
+            <div>
+              <p class="e-form-text">Do you have an account?</p>
+            </div>
+            <div>
+              <button class="e-btn-logIn" routerLink="/login">LOGIN</button>
+            </div>
+          </div> -->
+
           <button type="submit" (click)="login()" class="e-btn">LOG IN</button>
-          <br />
-          <button class="e-btn-signIn" routerLink="/register">SIGN IN</button>
+
+          <div class="e-register-container">
+            <div>
+              <p class="e-form-text">Create an account</p>
+            </div>
+            <div>
+              <button class="e-btn-signIn" routerLink="/register">
+                SIGN IN
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </form>

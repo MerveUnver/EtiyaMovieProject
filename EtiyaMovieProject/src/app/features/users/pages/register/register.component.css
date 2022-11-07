@@ -76,7 +76,7 @@
   font-size: 20px;
   line-height: 21px;
   letter-spacing: 0.02em;
-
+margin-top: 15px;
   color: #ffffff;
 
   opacity: 0.6;
@@ -101,6 +101,8 @@
   background-color: #242440;
   border: none;
   color: #ffffff;
+  margin-left: 22px;
+  text-decoration: underline;
 }
 .e-container{
   display: flex;
@@ -116,6 +118,5 @@ margin-right: 10%;
 }
 .e-register-container{
   align-items: center;
-  justify-content: center;
   display: flex;
 }

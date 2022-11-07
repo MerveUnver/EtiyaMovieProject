@@ -97,7 +97,7 @@
    font-size: 20px;
    line-height: 21px;
    letter-spacing: 0.02em;
- 
+   margin-top: 15px;
    color: #ffffff;
  
    opacity: 0.6;
@@ -122,5 +122,10 @@
   background-color: #242440;
   border: none;
   color: #ffffff;
-
+  text-decoration: underline;
+  margin-left: 68px;
  }
+ .e-register-container{
+  align-items: center;
+  display: flex;
+}

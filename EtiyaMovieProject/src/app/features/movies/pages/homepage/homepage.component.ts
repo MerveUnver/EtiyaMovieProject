@@ -11,8 +11,10 @@ import Category from '../../models/category';
 export class HomepageComponent implements OnInit {
   movies!:Movie[]
   name!:String;
+  @Input() roleId!:number;
   constructor(private moviesService:MoviesService, private authService:AuthService) { 
     this.name=authService.getUser.name+" "+authService.getUser.lastName;
+    this.roleId = authService.getUser.roleId ?? 1
   
   }
 

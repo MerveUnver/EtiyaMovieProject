@@ -18,6 +18,10 @@
     display: flex;
     justify-content: space-between;
 }
-.e-title{
-    color: #FFFFFF;
+.e-btn-movies{
+  background-color: #242440;
+  border: none;
+  color: #ffffff;
+ font-size: 25px;
+    
 }
