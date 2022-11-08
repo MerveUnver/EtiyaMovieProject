@@ -46,7 +46,7 @@ export class CategoryListComponent implements OnInit {
         element.isSelected = false
       }
     }
-    
   }
+ 
 }
 

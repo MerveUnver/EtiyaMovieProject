@@ -27,11 +27,10 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 25px;
-  
-    background: #83a6d1;
+    background-color: rgba(6, 31, 62, 0.85);
+   
     color: #ffff;
     border: 1px solid #f58220;
-    box-shadow: -8px -3px 4px rgba(0, 0, 0, 0.25);
   
     /* border-radius: 8px 8px 0 0; */
     transition: background ease 0.2s;
@@ -47,11 +46,10 @@
     display: none;
   }
   .e-tabs input[type='radio']:checked + label {
-    background-color: rgba(6, 31, 62, 0.85);
+    background: #2A5183;
     border: 1px solid #f58220;
     border-bottom: 0;
-    box-shadow: inset -10px -4px 7px 2px rgba(0, 0, 0, 0.25),
-      inset 5px 10px 6px -3px rgba(0, 0, 0, 0.25);
+ 
   }
   .e-tabs input[type='radio']:checked + label + .e-tab {
     display: block;

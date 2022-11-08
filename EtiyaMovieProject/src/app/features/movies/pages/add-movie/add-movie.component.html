@@ -15,7 +15,7 @@
               <div
                 class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
               >
-                <label>Movie Name </label>
+                <label>Movie Name* </label>
               </div>
               <div
                 class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
@@ -43,7 +43,6 @@
                   type="url"
                   class="e-input-dark"
                   formControlName="poster"
-                  maxlength="50"
                 />
               </div>
             </div>
@@ -90,7 +89,7 @@
               <div
                 class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
               >
-                <label>Categories</label>
+                <label>Categories*</label>
               </div>
               <div
                 class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
@@ -99,12 +98,13 @@
                   <select
                     name="categories"
                     id="categories"
-                    formControlName="categories"
+                    formControlName="categoryId"
                   >
-                    <option selected value="Comedy">Comedy</option>
-                    <option value="Action">Action</option>
-                    <option value="Dram">Dram</option>
-                    <option value="Romantic">Romantic</option>
+                    <option selected value="1">Action</option>
+                    <option value="2">Adventure</option>
+                    <option value="3">Comedy</option>
+                    <option value="4">Dram</option>
+                    <option value="5">Romantic</option>
                   </select>
                 </div>
               </div>

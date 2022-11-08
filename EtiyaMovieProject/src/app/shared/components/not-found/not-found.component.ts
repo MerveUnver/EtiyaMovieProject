@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./not-found.component.css'],
 })
 export class NotFoundComponent implements OnInit {
-  @Input() btnText!: string;
+  @Input() labelText!: string;
   constructor() {}
 
   ngOnInit(): void {}

@@ -14,8 +14,7 @@
                     else tableInfo
                   "
                 >
-                  <img class="e-warning-img" />
-                  <p class="e-form-text">Could not find any data</p>
+                  <app-not-found [labelText]="'No data found'"> </app-not-found>
                 </div>
                 <ng-template #tableInfo>
                   <app-table-info class="e-table">

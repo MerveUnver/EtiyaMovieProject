@@ -18,7 +18,7 @@
           *ngIf="!myMovieList || myMovieList.length == 0; else tableInfo"
         >
           <div>
-            <app-not-found> </app-not-found>
+            <app-not-found [labelText]="'No content found'"> </app-not-found>
             <button type="submit" routerLink="/add-movie" class="e-btn">
               ADD NEW MOVİE
             </button>
@@ -54,7 +54,7 @@
                 <tr *ngFor="let m of myMovieList">
                   <th>{{ m.name }}</th>
                   <td>{{ m.imdbRating }}</td>
-                  <td>{{ m.runtime }}</td>
+                  <td>{{ m.runtime }} min</td>
                   <td>{{ m.plot }}</td>
                   <td>
                     <button

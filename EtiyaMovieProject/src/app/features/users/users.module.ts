@@ -26,7 +26,7 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastModule,
+    ToastModule
   ],
   providers:[MessageService]
 })

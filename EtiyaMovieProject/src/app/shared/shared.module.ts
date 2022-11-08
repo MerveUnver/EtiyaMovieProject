@@ -53,7 +53,9 @@ import { ToastModule } from 'primeng/toast';
     InfoTitleComponent,
     TableInfoComponent,
     TabMenuComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CustomToastComponent,
+    WarningMessageComponent
   ]
 })
 export class SharedModule { }

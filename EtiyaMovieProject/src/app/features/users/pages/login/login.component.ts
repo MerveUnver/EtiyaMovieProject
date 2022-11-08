@@ -38,10 +38,10 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log(this.loginForm);
     if (!this.loginForm.valid) {
+      console.log("hh")
       this.messageService.add({
-        detail: 'Username and password cannot be left blank.',
+        detail: 'Email and password cannot be left blank.',
         key: 'etiya-warn',
       });
       return;

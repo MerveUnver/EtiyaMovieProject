@@ -36,10 +36,10 @@ export class AddMovieComponent implements OnInit {
   createFormAddMovie() {
     this.movieForm = this.formBuilder.group({
       name: [this.movie?.name, Validators.required],
-      runtime: [this.movie?.runtime,Validators.required],
-      categories: [this.movie?.category, Validators.required],
+      runtime: [this.movie?.runtime],
+      categoryId: [this.movie?.categoryId, Validators.required],
       poster: [this.movie?.poster],
-      year: [this.movie?.year, Validators.required],
+      year: [this.movie?.year],
       imdbRating: [this.movie?.imdbRating],
       plot: [this.movie?.plot],
       
