@@ -11,6 +11,7 @@ import Category from '../../models/category';
 export class HomepageComponent implements OnInit {
   movies!:Movie[]
   name!:String;
+  isAllCategory:boolean=true
   @Input() roleId!:number;
   constructor(private moviesService:MoviesService, private authService:AuthService) { 
     this.name=authService.getUser.name+" "+authService.getUser.lastName;
@@ -24,7 +25,11 @@ export class HomepageComponent implements OnInit {
     this.moviesService.getMoviesByCategory(category.id).subscribe(response=>{
       //console.warn(response)
       this.movies = response
+      this.isAllCategory=false
     })
   }
 
+  getAllMovie(event:boolean){
+this.isAllCategory=true
+  }
 }

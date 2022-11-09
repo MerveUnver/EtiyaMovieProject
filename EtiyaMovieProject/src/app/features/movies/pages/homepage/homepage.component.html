@@ -4,6 +4,7 @@
     <div class="col-3">
       <app-category-list
         (onBtnClick)="selectedMovie($event)"
+        [isAllCategory]="isAllCategory"
       ></app-category-list>
       <ng-template [ngIf]="roleId != 1">
         <button type="submit" routerLink="/add-movie" class="e-btn">
@@ -12,7 +13,10 @@
       </ng-template>
     </div>
     <div class="col-9">
-      <app-movie-list [movieList]="movies"></app-movie-list>
+      <app-movie-list
+        [movieList]="movies"
+        (onMovieClick)="getAllMovie($event)"
+      ></app-movie-list>
     </div>
   </div>
 </div>

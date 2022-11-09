@@ -13,10 +13,12 @@ import { VirtualTimeScheduler } from 'rxjs';
 })
 export class CategoryListComponent implements OnInit {
   @Output() onBtnClick: any = new EventEmitter()
+  @Input() isAllCategory: boolean=true
   categoryList!:Category[];
   tappedCategory!:Category;
   
-  constructor(private categoriesService:CategoriesService,private moviesService:MoviesService) { }
+  constructor(private categoriesService:CategoriesService,private moviesService:MoviesService) { 
+  }
 
   ngOnInit(): void {
       this.getCategories();

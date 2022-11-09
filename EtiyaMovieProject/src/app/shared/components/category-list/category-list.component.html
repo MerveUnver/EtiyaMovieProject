@@ -13,7 +13,7 @@
         type="button"
         style="color: black"
         [ngClass]="{
-          gray: ct.isSelected,
+          gray: !isAllCategory && ct.isSelected,
           white: !ct.isSelected
         }"
         (click)="getCategoryById(ct)"

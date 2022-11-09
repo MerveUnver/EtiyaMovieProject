@@ -1,6 +1,6 @@
 
 import { MoviesService } from './../../../features/movies/services/movies.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import Movie from 'src/app/features/movies/models/movie';
 import { UpperCasePipe } from '@angular/common';
 import Category from 'src/app/features/movies/models/category';
@@ -12,6 +12,8 @@ import Category from 'src/app/features/movies/models/category';
 })
 export class MovieListComponent implements OnInit {
   @Input() movieList!:Movie[];
+  @Output() onMovieClick: any = new EventEmitter()
+
   cartItems: any[] =[];
   filterText:string="";
   constructor(private moviesService:MoviesService) { }
@@ -24,6 +26,7 @@ export class MovieListComponent implements OnInit {
     this.moviesService.getList().subscribe((response) =>{
       console.log(response)
       this.movieList = response;  
+      this.onMovieClick.emit(true);
     })
   }
 
